@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; // Icon library (optional)
 import logo from '/src/assets/5[1] 1.png'
+import {Link} from 'react-router-dom'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,11 +20,11 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex  justify-end space-x-8 ">
-          <a href="/" className="text-gray-600 hover:text-blue-600 font-medium">Home</a>
-          <a href="/aboutus" className="text-gray-600 hover:text-blue-600 font-medium">About</a>
-          <a href="/course" className="text-gray-600 hover:text-blue-600 font-medium">Courses</a>
-          <a href="/blog" className="text-gray-600 hover:text-blue-600 font-medium">Blog</a>
-          <a href="/contact" className="text-gray-600 hover:text-blue-600 font-medium">Contact</a>
+          <Link to="/" className="text-gray-600 hover:text-blue-600 font-medium">Home</Link>
+          <Link to="/aboutus" className="text-gray-600 hover:text-blue-600 font-medium">About</Link>
+          <Link to="/course" className="text-gray-600 hover:text-blue-600 font-medium">Courses</Link>
+          <Link to="/blog" className="text-gray-600 hover:text-blue-600 font-medium">Blog</Link>
+          <Link to="/contact" className="text-gray-600 hover:text-blue-600 font-medium">Contact</Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -37,11 +38,11 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white flex flex-col justify-end px-4 pt-2 pb-4 space-y-2 shadow-md">
-          <a href="/" className="text-gray-600 hover:text-blue-600 font-medium">Home</a>
-          <a href="/aboutus" className="text-gray-600 hover:text-blue-600 font-medium">About</a>
-          <a href="/course" className="text-gray-600 hover:text-blue-600 font-medium">Courses</a>
-          <a href="/blog" className="text-gray-600 hover:text-blue-600 font-medium">Blog</a>
-          <a href="/contact" className="text-gray-600 hover:text-blue-600 font-medium">Contact</a>
+          <Link to="/" className="text-gray-600 hover:text-blue-600 font-medium">Home</Link>
+          <Link to="/aboutus" className="text-gray-600 hover:text-blue-600 font-medium">About</Link>
+          <Link to="/course" className="text-gray-600 hover:text-blue-600 font-medium">Courses</Link>
+          <Link to="/blog" className="text-gray-600 hover:text-blue-600 font-medium">Blog</Link>
+          <Link to="/contact" className="text-gray-600 hover:text-blue-600 font-medium">Contact</Link>
         </div>
       )}
     </nav>
