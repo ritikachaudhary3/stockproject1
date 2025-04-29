@@ -2,6 +2,10 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './assets/components/Navbar'
 import Home from './assets/components/Home'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Navbar from './assets/components/Navbar'
+import Footer from './assets/components/Footer'
+import Home from './assets/components/Home'
 import Accomplishment from './assets/components/Accomplishment'
 import Mentor from './assets/components/Mentor'
 import Aboutus from './assets/components/Aboutus'
@@ -10,114 +14,88 @@ import Blog from './assets/components/blogbox/Blog'
 import Clientreview from './assets/components/Clientreview'
 import Contactus from './assets/components/Contactus'
 import Faq from './assets/components/Faq'
-import Footer from './assets/components/Footer'
-// import Aboutus from './assets/components/Aboutus'
-import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 import Coursedetails from './assets/components/Coursedetails'
+import './App.css'
 
-const router= createBrowserRouter(
-  [
-    {
-      path:'/',
-      element:
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: (
       <div>
-        <Navbar/>
-        <Home/>
-        <Accomplishment/>
-        <Mentor/>
-        <Course/>
-        <Blog/>
-        <Clientreview/>
-        <Contactus/>
-        <Faq/>
-        <Footer/>
+        <Navbar />
+        <Home />
+        <Accomplishment />
+        <Mentor />
+        <Course />
+        <Blog />
+        <Clientreview />
+        <Contactus />
+        <Faq />
+        <Footer />
       </div>
-    },
-
-    {
-      path:'/about',
-      element:
+    ),
+  },
+  {
+    path: '/about',
+    element: (
       <div>
-        <Navbar/>
-        <Mentor/>
-        <Footer/>
+        <Navbar />
+        <Mentor />
+        <Footer />
       </div>
-    },
-
-    {
-      path:'/coursedetails',
-      element:
+    ),
+  },
+  {
+    path: '/coursedetails',
+    element: <Coursedetails />,
+  },
+  {
+    path: '/aboutus',
+    element: <Aboutus />,
+  },
+  {
+    path: '/course',
+    element: (
       <div>
-        <Coursedetails/>
+        <Navbar />
+        <Course />
+        <Footer />
       </div>
-    },
-
-    {
-      path:'/aboutus',
-      element:
+    ),
+  },
+  {
+    path: '/blog',
+    element: (
       <div>
-        <Aboutus/>
+        <Navbar />
+        <Blog />
+        <Footer />
       </div>
-    },
-
-    {
-      path:'/course',
-      element:
+    ),
+  },
+  {
+    path: '/contact',
+    element: (
       <div>
-        <Navbar/>
-        <Course/>
-        <Footer/>
+        <Navbar />
+        <Contactus />
+        <Footer />
       </div>
-    },
-
-    {
-      path:'/blog',
-      element:
-      <div>
-        <Navbar/>
-        <Blog/>
-        <Footer/>
-      </div>
-    },
-
-    {
-      path:'/contact',
-      element:
-      <div>
-        <Navbar/>
-        <Contactus/>
-        <Footer/>
-      </div>
-    }
-  ]
-)
-
-
-
-
-
-
+    ),
+  },
+]);
 
 function App() {
-
-
-  return (
-    <div>
-      <RouterProvider router={router}/>
-      {/* <Navbar/>
-      <Home/>
-      <Accomplishment/>
-      <Mentor/> */}
-      {/* <Aboutus/> */}
-      {/* <Course/>
-      <Blog/>
-      <Clientreview/>
-      <Contactus/>
-      <Faq/>
-      <Footer/>  */}
-      {/* <Aboutus/> */}
-    </div>
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
+
+
+
+
+
+
+
+
+
