@@ -8,7 +8,7 @@ const Contactus = () => {
     {/* Map and Heading Section */}
     <div className='md:flex flex-row gap-20  '>
     <div className=" w-full lg:w-1/2 px-4">
-      <h1 className="text-xl font-bold font-poppins mt-4">Contact Us</h1>
+      <h1 className="text-xl font-bold font-poppins mt-2">Contact Us</h1>
       <h2 className="text-3xl md:text-4xl font-bold font-poppins mt-4">We’re here to answer your question!</h2>
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.5106813887664!2d78.0061964!3d30.3079888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39092be94375e729%3A0xc160311fe8cb82d6!2sNovaNectar%20Services%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1745169889626!5m2!1sen!2sin" 

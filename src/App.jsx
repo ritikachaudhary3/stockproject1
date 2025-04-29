@@ -1,7 +1,4 @@
 import { useState } from 'react'
-import './App.css'
-import Navbar from './assets/components/Navbar'
-import Home from './assets/components/Home'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Navbar from './assets/components/Navbar'
 import Footer from './assets/components/Footer'
