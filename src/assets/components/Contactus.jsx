@@ -3,7 +3,7 @@ import React from 'react'
 const Contactus = () => {
   return (
   
-  <section className="max-w-7xl  mx-auto px-6 bg-[#E7F0FF]  lg:flex-row justify-between items-center gap-8 ">
+  <section id="contactus" className="max-w-7xl  mx-auto px-6 bg-[#E7F0FF]  lg:flex-row justify-between items-center gap-8 ">
 
     {/* Map and Heading Section */}
     <div className='md:flex flex-row gap-20  '>

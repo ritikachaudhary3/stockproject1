@@ -10,7 +10,7 @@ const Aboutus = () => {
   return (
     <div>
       <Navbar/>
-      <section className="bg-[#FDECF2] py-12 px-6">
+      <section  className="bg-[#FDECF2] py-12 px-6">
   <div className="max-w-[1140px] mx-auto">
     
     {/* First Row */}

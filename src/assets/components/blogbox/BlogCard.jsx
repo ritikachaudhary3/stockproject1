@@ -2,7 +2,7 @@ import React from 'react'
 
 const BlogCard = ({ photo, heading, description }) => {
   return (
-    <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+    <div id="blog" className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
       <img src={photo} alt="photo" className="w-full h-[180px] object-cover" />
       
       <div className="p-4">

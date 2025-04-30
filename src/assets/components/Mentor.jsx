@@ -5,7 +5,7 @@ const Mentor = () => {
   const navigate= useNavigate();
     
 return (
-        <section className="w-full min-h-screen p-6 flex flex-col-reverse md:flex-row items-center justify-center bg-[#FEF8FA]">
+        <section id="aboutus"className="w-full min-h-screen p-6 flex flex-col-reverse md:flex-row items-center justify-center bg-[#FEF8FA]">
           {/* Left Section: Text */}
           <div className="md:w-1/2 w-full flex flex-col items-center md:items-start text-center md:text-left p-4 gap-10 ">
             <h1 className="text-[20px] font-bold font-poppins mt-4">Meet the Mentor</h1>

@@ -1,30 +1,39 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; // Icon library (optional)
 import logo from '/src/assets/5[1] 1.png'
-import {Link} from 'react-router-dom'
+import { Link as ScrollLink } from "react-scroll"; // import Link from react-scroll
+
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+    const toggleMenu = () => setIsOpen(!isOpen);
+  
+    const scrollToSection = (id) => {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+        setIsOpen(false); // Close mobile menu after click
+      }
+    };
 
   return (
-    <nav className="bg-[#FEF8FA] w-full z-10 py-2 ">
-      <div className="max-w-7xl mx-auto px-10  shadow-md flex justify-between items-center h-16">
+    <nav className="bg-[#FEF8FA] w-full z-10 py-2 fixed top-0 shadow-md">
+      <div className="max-w-7xl mx-auto px-10 flex justify-between items-center h-16">
+        
         {/* Logo */}
-        <div className="text-2xl font-bold  text-blue-600">
-          <img src={logo} alt="logo" />
+        <div className="text-2xl font-bold text-blue-600">
+          <img src={logo} alt="logo" className="h-10" />
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex  justify-end space-x-8 ">
-          <Link to="/" className="text-gray-600 hover:text-blue-600 font-medium">Home</Link>
-          <Link to="/about" className="text-gray-600 hover:text-blue-600 font-medium">About</Link>
-          <Link to="/course" className="text-gray-600 hover:text-blue-600 font-medium">Courses</Link>
-          <Link to="/blog" className="text-gray-600 hover:text-blue-600 font-medium">Blog</Link>
-          <Link to="/contact" className="text-gray-600 hover:text-blue-600 font-medium">Contact</Link>
+        <div className="hidden md:flex justify-end space-x-8">
+        <button onClick={() => scrollToSection('home')} className="hover:text-[#3B82F6]">Home</button>         
+        <button onClick={() => scrollToSection('aboutus')} className="hover:text-[#3B82F6]">About</button>          
+        <button onClick={() => scrollToSection('course')} className="hover:text-[#3B82F6]">Course</button>
+        <button onClick={() => scrollToSection('blog')} className="hover:text-[#3B82F6]">Blog</button>
+        <button onClick={() => scrollToSection('contactus')} className="hover:text-[#3B82F6]">Contact</button>
+
         </div>
 
         {/* Mobile Menu Button */}
@@ -37,12 +46,12 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white flex flex-col justify-end px-4 pt-2 pb-4 space-y-2 shadow-md">
-          <Link to="/" className="text-gray-600 hover:text-blue-600 font-medium">Home</Link>
-          <Link to="/aboutus" className="text-gray-600 hover:text-blue-600 font-medium">About</Link>
-          <Link to="/course" className="text-gray-600 hover:text-blue-600 font-medium">Courses</Link>
-          <Link to="/blog" className="text-gray-600 hover:text-blue-600 font-medium">Blog</Link>
-          <Link to="/contact" className="text-gray-600 hover:text-blue-600 font-medium">Contact</Link>
+        <div className="md:hidden bg-white flex flex-col justify-end px-4 pt-2 pb-4 space-y-2">
+          <ScrollLink to="home" smooth={true} duration={500} offset={-70} className="text-gray-600 hover:text-blue-600 font-medium cursor-pointer" onClick={toggleMenu}>Home</ScrollLink>
+          <ScrollLink to="about" smooth={true} duration={500} offset={-70} className="text-gray-600 hover:text-blue-600 font-medium cursor-pointer" onClick={toggleMenu}>About</ScrollLink>
+          <ScrollLink to="course" smooth={true} duration={500} offset={-70} className="text-gray-600 hover:text-blue-600 font-medium cursor-pointer" onClick={toggleMenu}>Courses</ScrollLink>
+          <ScrollLink to="blog" smooth={true} duration={500} offset={-70} className="text-gray-600 hover:text-blue-600 font-medium cursor-pointer" onClick={toggleMenu}>Blog</ScrollLink>
+          <ScrollLink to="contact" smooth={true} duration={500} offset={-70} className="text-gray-600 hover:text-blue-600 font-medium cursor-pointer" onClick={toggleMenu}>Contact</ScrollLink>
         </div>
       )}
     </nav>
