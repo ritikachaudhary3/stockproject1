@@ -2,7 +2,7 @@ import React from 'react'
 import course from '/src/assets/download (2) 1.png'
 const Home = () => {
   return (
-    <section id="home" className="max-w-7xl mx-auto px-6  flex flex-col-reverse md:flex-row items-center justify-center bg-white ">
+    <section id="home" className="max-w-7xl  mx-auto px-6  flex flex-col-reverse md:flex-row items-center justify-center bg-white ">
       
     {/* Left Section (Text) */}
     <div className="flex flex-col md:w-1/2 w-full p-4">

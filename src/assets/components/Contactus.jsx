@@ -6,7 +6,7 @@ const Contactus = () => {
   <section id="contactus" className="max-w-7xl  mx-auto px-6 bg-[#E7F0FF]  lg:flex-row justify-between items-center gap-8 ">
 
     {/* Map and Heading Section */}
-    <div className='md:flex flex-row gap-20  '>
+    <div className='md:flex flex-row gap-32'>
     <div className=" w-full lg:w-1/2 px-4">
       <h1 className="text-xl font-bold font-poppins mt-2">Contact Us</h1>
       <h2 className="text-3xl md:text-4xl font-bold font-poppins mt-4">We’re here to answer your question!</h2>

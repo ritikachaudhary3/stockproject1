@@ -5,9 +5,9 @@ const Mentor = () => {
   const navigate= useNavigate();
     
 return (
-        <section id="aboutus"className="w-full min-h-screen p-6 flex flex-col-reverse md:flex-row items-center justify-center bg-[#FEF8FA]">
+        <section id="aboutus"className="w-full  p-6 flex flex-col-reverse md:flex-row items-center justify-center bg-[#FEF8FA]">
           {/* Left Section: Text */}
-          <div className="md:w-1/2 w-full flex flex-col items-center md:items-start text-center md:text-left p-4 gap-10 ">
+          <div className="md:w-1/2 w-full flex flex-col items-center md:items-start text-center md:text-left p-4  ">
             <h1 className="text-[20px] font-bold font-poppins mt-4">Meet the Mentor</h1>
             <h2 className="text-[32px] md:text-[38px] text-[#1200FF] font-bold font-poppins mt-2">
               Mr. Anubhav Kandpal
@@ -33,7 +33,7 @@ return (
             
             {/* Mentor Image */}
             <img
-              className="h-[250px] md:h-[350px] w-[190px] md:w-[260px] absolute top-[5%] md:top-[10%]"
+              className="h-[250px] md:h-[350px] w-[190px] md:w-[240px] absolute top-[5%] md:top-[10%]"
               src={photo}
               alt="mentor"
             />
