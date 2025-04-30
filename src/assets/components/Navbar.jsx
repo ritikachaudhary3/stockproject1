@@ -18,7 +18,7 @@ export default function Navbar() {
     };
 
   return (
-    <nav className="bg-[#FEF8FA] w-full z-10 py-2 fixed top-0 shadow-md">
+    <nav className="bg-[#FEF8FA] w-full z-10 py-2 top-0 shadow-md">
       <div className="max-w-7xl mx-auto px-10 flex justify-between items-center h-16">
         
         {/* Logo */}
