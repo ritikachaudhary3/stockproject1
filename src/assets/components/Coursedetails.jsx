@@ -19,7 +19,7 @@ const Coursedetails = () => {
     <div>
       <Navbar/>
       <section className="bg-[#FDECF2] py-12 px-6  md:px-6 ">
-  <div className="max-w-[1140px] mx-auto  flex flex-col lg:flex-row gap-20">
+  <div className="max-w-[1140px] mx-auto  flex flex-col lg:flex-row gap-20 md:mt-4">
     
     {/* Left Section - Course Details */}
     <div className="w-full lg:w-[60%]">

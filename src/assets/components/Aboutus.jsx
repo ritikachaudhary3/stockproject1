@@ -10,8 +10,8 @@ const Aboutus = () => {
   return (
     <div>
       <Navbar/>
-      <section  className="bg-[#FDECF2] py-12 px-6">
-  <div className="max-w-[1140px] mx-auto">
+      <section  className="bg-[#FDECF2] py-12 px-6 ">
+  <div className="max-w-[1140px] mx-auto md:mt-4">
     
     {/* First Row */}
     <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
